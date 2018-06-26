@@ -1,0 +1,35 @@
+{
+  "name": "react-native-webbrowser-with-back",
+  "version": "1.0.36",
+  "description": "A cross-platform (iOS / Android), full-featured in-app web browser component for React Native that is highly customizable",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fahadhaq/react-native-webbrowser.git"
+  },
+  "keywords": [
+    "webview",
+    "webbrowser",
+    "browser",
+    "web",
+    "native",
+    "react",
+    "ios",
+    "android",
+    "react-native",
+    "react-component"
+  ],
+  "author": "Fahad Haque",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fahadhaq/react-native-webbrowser/issues"
+  },
+  "homepage": "https://github.com/fahadhaq/react-native-webbrowser#readme",
+  "dependencies": {
+    "react-native-loading-spinner-overlay": "^0.5.2"
+  }
+}
