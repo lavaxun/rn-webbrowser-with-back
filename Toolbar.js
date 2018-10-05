@@ -41,7 +41,6 @@ class Toolbar extends BaseComponent {
     }
 
     if (this.props.webViewRef) {
-      console.log(this.props.webViewRef.state.viewState);
       if (this.props.webViewRef.state.viewState === "LOADING") {
         return (
           <Button
@@ -55,7 +54,6 @@ class Toolbar extends BaseComponent {
           </Button>
         );
       } else if (this.props.webViewRef.state.viewState === "IDLE") {
-        console.log(this.props.webViewRef.state.viewState);
         return (
           <Button
             disabled={!this.state.homeButtonEnabled}
