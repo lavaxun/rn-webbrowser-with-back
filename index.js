@@ -73,6 +73,7 @@ class Webbrowser extends BaseComponent {
       "goHome",
       "goForward",
       "reload",
+      "stop",
       "onNavigationStateChange",
       "onShouldStartLoadWithRequest",
       "renderToolbar"
@@ -103,9 +104,6 @@ class Webbrowser extends BaseComponent {
   }
 
   renderBackButton() {
-    console.log("backButtonVisible = ", this.props.backButtonVisible);
-    console.log("onBackPress = ", this.props.onBackPress);
-
     return (
       <BackButton
         visible={this.props.backButtonVisible}
@@ -138,10 +136,12 @@ class Webbrowser extends BaseComponent {
         onBack={this.goBack}
         onHome={this.reload}
         onForward={this.goForward}
+        onStop={this.stop}
         backButtonEnabled={this.state.backButtonEnabled}
         forwardButtonEnabled={this.state.forwardButtonEnabled}
         hideRefreshButton={this.props.hideRefreshButton}
         foregroundColor={this.props.foregroundColor}
+        webViewRef={this.refs[WEBVIEW_REF]}
       />
     );
   }
@@ -206,6 +206,10 @@ class Webbrowser extends BaseComponent {
 
   reload() {
     this.refs[WEBVIEW_REF].reload();
+  }
+
+  stop() {
+    this.refs[WEBVIEW_REF].stopLoading();
   }
 
   onShouldStartLoadWithRequest(event) {
