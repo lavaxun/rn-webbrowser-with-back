@@ -4,7 +4,7 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
-import { View, Image } from "react-native";
+import { View, Image, Platform } from "react-native";
 
 import BaseComponent from "./BaseComponent";
 import Button from "./Button";
@@ -41,19 +41,33 @@ class Toolbar extends BaseComponent {
     }
 
     if (this.props.webViewRef) {
-      if (this.props.webViewRef.state.viewState === "LOADING") {
-        return (
-          <Button
-            disabled={!this.state.homeButtonEnabled}
-            onPress={this.state.onStop}
-          >
-            <Image
-              style={this.buttonStyle()}
-              source={require("./assets/images/stop-loading.png")}
-            />
-          </Button>
-        );
-      } else if (this.props.webViewRef.state.viewState === "IDLE") {
+      if (Platform.OS === "android") {
+        if (this.props.webViewRef.state.viewState === "LOADING") {
+          return (
+            <Button
+              disabled={!this.state.homeButtonEnabled}
+              onPress={this.state.onStop}
+            >
+              <Image
+                style={this.buttonStyle()}
+                source={require("./assets/images/stop-loading.png")}
+              />
+            </Button>
+          );
+        } else if (this.props.webViewRef.state.viewState === "IDLE") {
+          return (
+            <Button
+              disabled={!this.state.homeButtonEnabled}
+              onPress={this.state.onHome}
+            >
+              <Image
+                style={this.buttonStyle()}
+                source={require("./assets/images/refresh-empty.png")}
+              />
+            </Button>
+          );
+        }
+      } else {
         return (
           <Button
             disabled={!this.state.homeButtonEnabled}

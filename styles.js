@@ -89,8 +89,8 @@ export default StyleSheet.create({
   },
 
   toolBarIcons: {
-    width: 25,
-    height: 25,
+    width: 30,
+    height: 30,
     opacity: 0.9
   }
 });
