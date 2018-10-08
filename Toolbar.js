@@ -40,6 +40,8 @@ class Toolbar extends BaseComponent {
       return <View />;
     }
 
+    // https://github.com/facebook/react-native/issues/15679#issuecomment-352153506
+    // stopLoading button is disabled on iOS due to react native issue
     if (this.props.webViewRef) {
       if (Platform.OS === "android") {
         if (this.props.webViewRef.state.viewState === "LOADING") {
