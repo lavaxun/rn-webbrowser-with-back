@@ -83,9 +83,7 @@ export default StyleSheet.create({
     shadowRadius: SHADOW_RADIUS,
     shadowOffset: { height: 0, width: 0 },
     flexDirection: "row",
-    justifyContent: "space-around",
-    paddingTop: ELEMENT_MARGIN,
-    paddingBottom: ELEMENT_MARGIN
+    justifyContent: "space-around"
   },
 
   toolBarIcons: {
