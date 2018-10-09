@@ -108,7 +108,7 @@ class Toolbar extends BaseComponent {
         >
           <Image
             style={this.arrowButtonStyle()}
-            source={require("./assets/images/arrow-left.png")}
+            source={require("./assets/images/baseline_chevron_left_white_48.png")}
           />
         </Button>
 
@@ -120,7 +120,7 @@ class Toolbar extends BaseComponent {
         >
           <Image
             style={this.arrowButtonStyle()}
-            source={require("./assets/images/arrow-right.png")}
+            source={require("./assets/images/baseline_chevron_right_white_48.png")}
           />
         </Button>
       </View>
