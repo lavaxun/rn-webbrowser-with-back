@@ -92,6 +92,13 @@ class Toolbar extends BaseComponent {
     ];
   }
 
+  arrowButtonStyle() {
+    return [
+      styles.arrowIcons,
+      this.props.foregroundColor && { tintColor: this.props.foregroundColor }
+    ];
+  }
+
   render() {
     return (
       <View style={styles.toolBar}>
@@ -100,7 +107,7 @@ class Toolbar extends BaseComponent {
           onPress={this.state.onBack}
         >
           <Image
-            style={this.buttonStyle()}
+            style={this.arrowButtonStyle()}
             source={require("./assets/images/arrow-left.png")}
           />
         </Button>
@@ -112,7 +119,7 @@ class Toolbar extends BaseComponent {
           onPress={this.state.onForward}
         >
           <Image
-            style={this.buttonStyle()}
+            style={this.arrowButtonStyle()}
             source={require("./assets/images/arrow-right.png")}
           />
         </Button>

@@ -89,8 +89,14 @@ export default StyleSheet.create({
   },
 
   toolBarIcons: {
-    width: 30,
-    height: 30,
+    width: 25,
+    height: 25,
+    opacity: 0.9
+  },
+
+  arrowIcons: {
+    width: 20,
+    height: 20,
     opacity: 0.9
   }
 });
