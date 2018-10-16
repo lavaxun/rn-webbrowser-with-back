@@ -150,4 +150,4 @@ Toolbar.defaultProps = {
   onForward: () => {}
 };
 
-module.exports = Toolbar;
+export default Toolbar;
