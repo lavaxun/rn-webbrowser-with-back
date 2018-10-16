@@ -89,4 +89,4 @@ AddressBar.defaultProps = {
     onReload: ()=>{}
 };
 
-module.exports = AddressBar;
+export default AddressBar;
