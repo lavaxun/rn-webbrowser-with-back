@@ -53,4 +53,4 @@ StatusBar.defaultProps = {
     status: '',
 };
 
-module.exports = StatusBar;
+export default StatusBar;
