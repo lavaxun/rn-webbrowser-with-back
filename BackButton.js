@@ -77,4 +77,4 @@ BackButton.defaultProps = {
   visible: true,
 };
 
-module.exports = BackButton;
+export default BackButton;
